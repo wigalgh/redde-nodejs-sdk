@@ -6,7 +6,7 @@ Before you can have access to APIs you need to register and create an [Account](
 For more information on documentation go to developers.reddeonline.com
 
 * [Installation](#installation)
-* [Usage](https://github.com/wigalsolutionsltd/redde-nodejs#usage)
+* [Usage](#usage)
 * [Examples](https://github.com/wigalsolutionsltd/redde-nodejs#examples)
 
 ## Installation
@@ -21,10 +21,11 @@ npm i redde
 
 
 
+## Usage
 
-
-
-## Title
+``` 
+ const functions = require('redde');
+```
 
 ### Place 1
 
