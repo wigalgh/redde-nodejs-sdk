@@ -16,4 +16,20 @@ To use this library you'll need to have created a [Redde account](https://app.re
 npm i redde                                                                                         
 `
 
->You don't need to clone this repository to use this package in your own projects. Use Npm to install it from npmjs.
+>You don't need to clone this repository to use this package in your own projects. Use Npm to install it from [npmjs](https://www.npmjs.com/package/redde).
+
+
+
+
+
+
+
+## Title
+
+### Place 1
+
+Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
+
+### Place 2
+
+Place one has the fun times of linking here, but I can also link back [here](#place-1).
