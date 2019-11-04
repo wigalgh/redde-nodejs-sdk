@@ -12,7 +12,7 @@ For more information on documentation go to developers.reddeonline.com
 ## Installation
 To use this library you'll need to have created a [Redde account](https://app.reddeonline.com/register).                     To install this package and use in your project, we recommend using Npm.
 
-```js
+```
 npm i redde                                                                                         
 ```
 
@@ -23,15 +23,20 @@ npm i redde
 
 ## Usage
 
-``` 
- const functions = require('redde');
-```
+```js
+const functions = require('redde');
 
+```
 ### Place 1
 
-Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
+Navigate to the **node_modules** folder and open the redde folder and locate a js file called **reddeConfig.js**.
+Enter your API key and App ID which was provided to you by the Redde Team:
 
-
-### Place 2
-
-Place one has the fun times of linking here, but I can also link back [here](#place-1).
+```js
+module.exports = {
+     receiveUrl : 'https://api.reddeonline.com/v1/receive/',
+     cashoutUrl : 'https://api.reddeonline.com/v1/cashout',
+     appID :0001 ,//Replace 0001 with your app ID
+     apiKey: '' //Enter your Api Key here
+}
+``` 
