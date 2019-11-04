@@ -12,7 +12,7 @@ For more information on documentation go to developers.reddeonline.com
 ## Installation
 To use this library you'll need to have created a [Redde account](https://app.reddeonline.com/register).                     To install this package and use in your project, we recommend using Npm.
 
-```
+```js
 npm i redde                                                                                         
 ```
 
