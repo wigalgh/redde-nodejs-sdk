@@ -12,9 +12,9 @@ For more information on documentation go to developers.reddeonline.com
 ## Installation
 To use this library you'll need to have created a [Redde account](https://app.reddeonline.com/register).                     To install this package and use in your project, we recommend using Npm.
 
-`
+```
 npm i redde                                                                                         
-`
+```
 
 >You don't need to clone this repository to use this package in your own projects. Use Npm to install it from [npmjs](https://www.npmjs.com/package/redde).
 
