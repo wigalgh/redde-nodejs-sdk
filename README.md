@@ -7,13 +7,13 @@ For more information on documentation go to developers.reddeonline.com
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Examples](https://github.com/wigalsolutionsltd/redde-nodejs#examples)
+* [Examples](#examples)
 
 ## Installation
 To use this library you'll need to have created a [Redde account](https://app.reddeonline.com/register).                     To install this package and use in your project, we recommend using Npm.
 
 ```
-npm i redde                                                                                         
+npm i redde                                                                                        
 ```
 
 >You don't need to clone this repository to use this package in your own projects. Use Npm to install it from [npmjs](https://www.npmjs.com/package/redde).
@@ -27,7 +27,6 @@ npm i redde
 const functions = require('redde');
 
 ```
-### Place 1
 
 Navigate to the **node_modules** folder and open the redde folder and locate a js file called **reddeConfig.js**.
 Enter your API key and App ID which was provided to you by the Redde Team:
@@ -40,3 +39,14 @@ module.exports = {
      apiKey: '' //Enter your Api Key here
 }
 ``` 
+
+
+### Examples
+
+### Receiving money from Customer or Client
+
+To use the API to recieve money from a customer, the receiveMoney() method will be used using a simple array of parameters, the keys match the parameters of the API.
+
+```js
+var payload = functions.receiveMoney(1, "MTN", 233240000004, ref, clientid);
+```
