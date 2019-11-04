@@ -43,7 +43,7 @@ module.exports = {
 ``` 
 
 
-### Examples
+## Examples
 
 #### Receiving money from Customer or Client
 
