@@ -87,7 +87,7 @@ app.listen(8080);
 ```
 
 
-#### Sending money from Customer or Client
+#### Sending money to a Customer or Client
 
 To use the API to send money to a customer, the sendMoney() method will be used which takes takes 5 required arguments where are: **amount, network type(MTN, AIRTELTIGO, VODAFONE), phone number, client reference, and client id** respectively.
 
