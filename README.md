@@ -43,10 +43,45 @@ module.exports = {
 
 ### Examples
 
-### Receiving money from Customer or Client
+#### Receiving money from Customer or Client
 
-To use the API to recieve money from a customer, the receiveMoney() method will be used using a simple array of parameters, the keys match the parameters of the API.
+To use the API to recieve money from a customer, the receiveMoney() method will be used which takes takes 5 required arguments where are: amount, network type(MTN, AIRTELTIGO,VODAFONE), phone number, client reference, and client id respectively.
 
 ```js
+const request = require('request');
+const functions = require('redde');
+var express = require("express");
+var myParser = require("body-parser");
+var app = express();
+
+app.use(myParser.json({ extended: true }));
+
+//Generating Random Client Reference
+var ref = functions.clientRef(6);
+
+//Generating Random Client ID
+var clientid = functions.clientID(6);
+
+//Calling Receive Function 
 var payload = functions.receiveMoney(1, "MTN", 233240000004, ref, clientid);
+
+//Sending a request to redde endpoint
+request.post(payload, (err, res, body) => {
+    if (err) {
+        return console.log(err);
+    }
+    console.log(JSON.parse(JSON.stringify(body)));
+});
+
+//Callback Url Endpoint
+app.post("/payment", function (req, res) {
+    var data = req.body;
+    res.send(data);
+
+});
+
+
+app.listen(8080);
 ```
+
+
