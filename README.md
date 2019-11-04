@@ -5,7 +5,7 @@ Before you can have access to APIs you need to register and create an [Account](
 
 For more information on documentation go to developers.reddeonline.com
 
-* [Installation](https://github.com/wigalsolutionsltd/redde-nodejs#installation)
+* [Installation](#installation)
 * [Usage](https://github.com/wigalsolutionsltd/redde-nodejs#usage)
 * [Examples](https://github.com/wigalsolutionsltd/redde-nodejs#examples)
 
@@ -29,27 +29,7 @@ npm i redde
 ### Place 1
 
 Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
-A PHP SDK built around the Redde REST API that allows merchants to receive, send, check transaction status, and perform lots of payment transactions.
 
-Before you can have access to APIs you need to register and create an Account. Header for all request should have {"apikey": "string"}: and this API key will be sent to merchant when their app configuration is setup for them by Wigal.
-
-For more information on documentation go to developers.reddeonline.com
-
-Installation
-A PHP SDK built around the Redde REST API that allows merchants to receive, send, check transaction status, and perform lots of payment transactions.
-
-Before you can have access to APIs you need to register and create an Account. Header for all request should have {"apikey": "string"}: and this API key will be sent to merchant when their app configuration is setup for them by Wigal.
-
-For more information on documentation go to developers.reddeonline.com
-
-Installation
-A PHP SDK built around the Redde REST API that allows merchants to receive, send, check transaction status, and perform lots of payment transactions.
-
-Before you can have access to APIs you need to register and create an Account. Header for all request should have {"apikey": "string"}: and this API key will be sent to merchant when their app configuration is setup for them by Wigal.
-
-For more information on documentation go to developers.reddeonline.com
-
-Installation
 
 ### Place 2
 
