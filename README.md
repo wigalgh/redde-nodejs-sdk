@@ -1,4 +1,5 @@
-![alt text](https://www.reddeonline.com/assets/images/redde-logo.png)
+<img src="https://www.reddeonline.com/assets/images/redde-logo.png" width=400>
+
 
 # redde-nodejs-sdk
 Nodejs Redde Merchant REST API that allows merchants to receive, send, check transaction status, and perform lots of payment transactions.
