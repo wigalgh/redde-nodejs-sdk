@@ -1,13 +1,24 @@
 {
-  "name": "redde",
-  "version": "1.0.2",
-  "description": "Redde allows Merchants to receive, send, check transaction status, and perform lots of payment transactions",
+  "name": "redde-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "Redde is a system that allows merchants to receive payments for goods and services. You can use the Redde portal to sweep your money into your bank account. Transactions via Redde happen online via a web browser or our Redde app available for iOS, Windows. And Android",
   "main": "redde.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ricardo Volvox",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wigalsolutionsltd/redde-nodejs-sdk.git"
+  },
+  "keywords": [
+    "redde-sdk"
+  ],
+  "author": "Richard Asante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wigalsolutionsltd/redde-nodejs-sdk/issues"
+  },
+  "homepage": "https://github.com/wigalsolutionsltd/redde-nodejs-sdk#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
