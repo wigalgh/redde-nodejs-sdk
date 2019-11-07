@@ -49,7 +49,7 @@ const redde = new Redde(api_key, app_id);
 
 #### Receiving money from Customer or Client
 
-To use the API to recieve money from a customer, the receiveMoney() method will be used which takes takes 5 required arguments which are: **amount, network type(MTN, AIRTELTIGO, VODAFONE), phone number, client reference, and client id** respectively.
+To use the API to recieve money from a customer, the receiveMoney() method will be used which takes takes 5 required arguments which are: **amount, network type (MTN, AIRTELTIGO, VODAFONE), phone number, client reference, and client id** respectively.
 
 ```js
 const request = require('request');
