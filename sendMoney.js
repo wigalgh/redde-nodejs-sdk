@@ -1,22 +1,30 @@
 const request = require('request');
-const functions = require('./redde');
+const Redde = require('./redde');
 var express = require("express");
 var myParser = require("body-parser");
 var app = express();
 
 app.use(myParser.json({ extended: true }));
 
+
+app_id = ""; //Enter Your App ID Here
+api_key = ""; //Enter Your Api Key Here
+
+//Instantiate ReddeApi class
+const redde = new Redde(api_key, app_id);
+
+
 //Generating Random Client Reference
-var ref = functions.clientRef(6);
+var ref = redde.clientRef(6);
 
 //Generating Random Client ID
-var clientid = functions.clientID(6);
+var clientid = redde.clientID(6);
 
-//Calling Cashout Function 
-var payload = functions.sendMoney(1, "MTN", 233544744604, ref, clientid);
+//Calling Receive Function 
+var receive = redde.sendMoney(1, "MTN", 233240000004, ref, clientid);
 
 //Sending a request to redde endpoint
-request.post(payload, (err, res, body) => {
+request.post(receive, (err, res, body) => {
     if (err) {
         return console.log(err);
     }
@@ -29,5 +37,6 @@ app.post("/payment", function (req, res) {
     res.send(data);
 
 });
+
 
 app.listen(8080);

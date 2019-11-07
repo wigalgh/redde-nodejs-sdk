@@ -1,6 +1,6 @@
 {
   "name": "redde",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Redde allows Merchants to receive, send, check transaction status, and perform lots of payment transactions",
   "main": "redde.js",
   "scripts": {

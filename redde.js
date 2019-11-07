@@ -1,75 +1,81 @@
-const config = require('./reddeConfig');
 
-var receive_url = config.receiveUrl;
-var cashout_url = config.cashoutUrl;
-var appid = config.appID;
-var apiKey = config.apiKey;
-
-module.exports = {
-    
-clientRef: function (len) {
-    arr = '123456789';
-    var ans = '';
-    for (var i = len; i > 0; i--) {
-        ans +=
-            arr[Math.floor(Math.random() * arr.length)];
+class ReddeApi {
+   
+    constructor(apikey, appid) {
+        this.apikey = apikey;
+        this.appid = appid;
     }
-    return ans;
-},
 
-clientID: function(len) {
-    arr = '123456789abcdefghijklmnpqrstxyzABCDDEFGHIJKLMNOPQRSTUVWXYZ';
-    var ans = '';
-    for (var i = len; i > 0; i--) {
-        ans +=
-            arr[Math.floor(Math.random() * arr.length)];
+    clientRef(len) {
+        var arr = '123456789';
+        var ans = '';
+        for (var i = len; i > 0; i--) {
+            ans +=
+                arr[Math.floor(Math.random() * arr.length)];
+        }
+        return ans;
     }
-    return ans;
-},
 
-    
-    receiveMoney: function (amount, payment_option, wallet_number, client_reference, client_id, description = "Merchant"){
-    const options = {
-        url: receive_url,
-        headers: {
-            'Content-Type': 'application/json',
-            'ApiKey': apiKey
-        },
-        json: {
-            "amount": amount,
-            "appid": appid,
-            "clientreference": client_reference,
-            "clienttransid": client_id,
-            "description": description,
-            "nickname": "wigal",
-            "paymentoption": payment_option,
-            "vouchercode": "",
-            "walletnumber": wallet_number
-        }
-    };
-    return options;
-},
 
-    sendMoney: function (amount, payment_option, wallet_number, client_reference, client_id, description = "Merchant"){
-    const options = {
-        url: cashout_url,
-        headers: {
-            'Content-Type': 'application/json',
-            'ApiKey': apiKey
-        },
-        json: {
-            "amount": amount,
-            "appid": appid,
-            "clientreference": client_reference,
-            "clienttransid": client_id,
-            "description": description,
-            "nickname": "wigal",
-            "paymentoption": payment_option,
-            "vouchercode": "",
-            "walletnumber": wallet_number
+    clientID(len) {
+        var arr = '123456789abcdefghijklmnpqrstxyzABCDDEFGHIJKLMNOPQRSTUVWXYZ';
+        var ans = '';
+        for (var i = len; i > 0; i--) {
+            ans +=
+                arr[Math.floor(Math.random() * arr.length)];
         }
-    };
-    return options;
+        return ans;
+    }
+
+
+    receiveMoney(amount, payment_option, wallet_number, client_reference, client_id, description=""){
+        
+        const options = {
+            url: 'https://api.reddeonline.com/v1/receive/',
+            headers: {
+                'Content-Type': 'application/json',
+                'ApiKey': this.apikey
+            },
+            json: {
+                "amount": amount,
+                "appid": this.appid,
+                "clientreference": client_reference,
+                "clienttransid": client_id,
+                "description": description,
+                "nickname": "wigal",
+                "paymentoption": payment_option,
+                "vouchercode": "",
+                "walletnumber": wallet_number
+            }
+        };
+        return options;
+    }
+
+    sendMoney(amount, payment_option, wallet_number, client_reference, client_id, description=""){
+       
+        const options = {
+            url: "https://api.reddeonline.com/v1/cashout",
+            headers: {
+                'Content-Type': 'application/json',
+                'ApiKey': this.apikey
+            },
+            json: { 
+                "amount": amount,
+                "appid": this.appid,
+                "clientreference": client_reference,
+                "clienttransid": client_id,
+                "description": description,
+                "nickname": "wigal",
+                "paymentoption": payment_option,
+                "vouchercode": "",
+                "walletnumber": wallet_number
+            }
+        };
+        return options;
+
+
+    }
+
 }
 
-};
+module.exports = ReddeApi
