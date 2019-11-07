@@ -1,6 +1,6 @@
 
 class ReddeApi {
-   
+
     constructor(apikey, appid) {
         this.apikey = apikey;
         this.appid = appid;
@@ -28,8 +28,8 @@ class ReddeApi {
     }
 
 
-    receiveMoney(amount, payment_option, wallet_number, client_reference, client_id, description=""){
-        
+    receiveMoney(amount, payment_option, wallet_number, client_reference, client_id, description = "") {
+
         const options = {
             url: 'https://api.reddeonline.com/v1/receive/',
             headers: {
@@ -51,15 +51,15 @@ class ReddeApi {
         return options;
     }
 
-    sendMoney(amount, payment_option, wallet_number, client_reference, client_id, description=""){
-       
+    sendMoney(amount, payment_option, wallet_number, client_reference, client_id, description = "") {
+
         const options = {
             url: "https://api.reddeonline.com/v1/cashout",
             headers: {
                 'Content-Type': 'application/json',
                 'ApiKey': this.apikey
             },
-            json: { 
+            json: {
                 "amount": amount,
                 "appid": this.appid,
                 "clientreference": client_reference,

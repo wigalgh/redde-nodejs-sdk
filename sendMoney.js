@@ -21,7 +21,7 @@ var ref = redde.clientRef(6);
 var clientid = redde.clientID(6);
 
 //Calling Receive Function 
-var receive = redde.sendMoney(1, "MTN", 233240000004, ref, clientid);
+var receive = redde.sendMoney(1, "MTN", 233500000604, ref, clientid);
 
 //Sending a request to redde endpoint
 request.post(receive, (err, res, body) => {
